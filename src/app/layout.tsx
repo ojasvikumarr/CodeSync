@@ -5,6 +5,7 @@ import { ClerkProvider, RedirectToSignIn, SignedIn, SignedOut } from "@clerk/nex
 import ConvexClerkProvider from "@/components/providers/ConvexClerkProvider";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { Toaster } from "react-hot-toast";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -42,6 +43,7 @@ export default function RootLayout({
           <RedirectToSignIn />
         </SignedOut>
         </ThemeProvider>
+        <Toaster/>
       </body>
     </html>
     </ConvexClerkProvider>
